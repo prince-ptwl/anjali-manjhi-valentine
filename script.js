@@ -1,5 +1,6 @@
 const noBtn = document.getElementById("no");
 const yesBtn = document.getElementById("yes");
+const heartsContainer = document.getElementById("hearts");
 
 noBtn.addEventListener("mouseover", () => {
   const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
@@ -10,5 +11,22 @@ noBtn.addEventListener("mouseover", () => {
 });
 
 yesBtn.addEventListener("click", () => {
-  alert("Yayyy! ❤️ Anjali, you just made Prince the happiest person 😍");
+  createHearts();
+  alert("Anjali ❤️ tumne Prince ka din bana diya 😍");
 });
+
+function createHearts() {
+  for (let i = 0; i < 25; i++) {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.bottom = "0px";
+    heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+}
