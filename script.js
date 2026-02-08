@@ -12,7 +12,7 @@ noBtn.addEventListener("mouseover", () => {
 
 yesBtn.addEventListener("click", () => {
   createHearts();
-  alert("Anjali ❤️ tumne Prince ka din bana diya 😍");
+  alert("Anjali ❤️ I don’t know about forever, but today I feel truly lucky to have you in my life love you  betu ❤️”");
 });
 
 function createHearts() {
